@@ -1,19 +1,18 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import { resolve } from "path";
-import { VitePWA } from "vite-plugin-pwa";
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import { VitePWA } from 'vite-plugin-pwa';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  root: resolve(__dirname, "src"),
-  base: "./",
-  publicDir: resolve(__dirname, "public"),
+  root: 'src',
+  base: './',
+  publicDir: 'public',
   server: {
     open: true,
   },
   build: {
-    outDir: resolve(__dirname, "dist"),
+    outDir: 'dist',
     emptyOutDir: true,
   },
-  plugins: [react(), VitePWA({ registerType: "autoUpdate" })],
+  plugins: [react(), VitePWA({ registerType: 'autoUpdate' })],// eslint-disable-line
 });
